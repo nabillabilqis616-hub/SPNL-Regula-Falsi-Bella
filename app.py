@@ -11,11 +11,11 @@ import matplotlib.pyplot as plt
 
 #Judul tab web
 st.set_page_config(
-  page_title="SPNL - Metode Regula Falsi".
-  layout="centeredd"
+  page_title="SPNL - Metode Regula Falsi",
+  layout="centered"
 )
 
-st.tittle("Aplikasi ini digunakan untuk mencari akar persamaan non-linear tunggal menggunakan metode Regula Falsi, "
+st.title("Aplikasi ini digunakan untuk mencari akar persamaan non-linear tunggal menggunakan metode Regula Falsi, "
 )
 
 st.sidebar.header("Input Parameter")
@@ -35,10 +35,10 @@ max_iterasi = st.sidebar.number_input("Maksimum iterasi", value=50, min_value=1,
 def buat_fungsi(teks_fungsi):
   x = sp.symbols("x")
   try:
-    ekspresi = sp.sympify(teks_fumgsi)
-    fungsi_numerik = sp.lamdify(x, ekspresi,"numpy")
+    ekspresi = sp.sympify(teks_fungsi)
+    fungsi_numerik = sp.lambdify(x, ekspresi,"numpy")
     return ekspresi, fungsi_numerik
-    except:
+  except:
     raise ValueError("fungsi tidak valid, periksa kembali penulisan f(x)")
 
 def metode_regula_falsi(f, a, b, toleransi, max_iterasi):
