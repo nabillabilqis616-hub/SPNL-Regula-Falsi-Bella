@@ -15,7 +15,7 @@ st.set_page_config(
   layout="centered"
 )
 
-st.title("Aplikasi ini digunakan untuk mencari akar persamaan non-linear tunggal menggunakan metode Regula Falsi, "
+st.title("Aplikasi ini digunakan untuk mencari akar persamaan non-linear tunggal menggunakan metode Regula Falsi "
 )
 
 st.sidebar.header("Input Parameter")
