@@ -106,14 +106,6 @@ if st.button("Hitung Regula Falsi"):
 
         st.pyplot(fig)
 
-        # Download CSV
-        csv = hasil.to_csv(index=False).encode("utf-8")
-        st.download_button(
-            "Unduh Hasil (CSV)",
-            data=csv,
-            file_name="hasil_regula_falsi.csv"
-        )
-
         st.info("Aplikasi ini dibuat untuk tugas SPNL menggunakan metode Regula Falsi")
 
     except Exception as e:
